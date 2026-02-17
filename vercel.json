@@ -7,5 +7,9 @@
         "distDir": "dist"
       }
     }
+  ],
+  "routes": [
+    // 核心规则：所有请求都重写到 index.html，适配 Vue SPA 路由
+    { "src": "/[^.]+", "dest": "/index.html", "status": 200 }
   ]
 }
