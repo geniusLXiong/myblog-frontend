@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "package.json",
@@ -9,6 +10,12 @@
     }
   ],
   "routes": [
-    { "src": "/[^.]+", "dest": "/index.html", "status": 200 }
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
